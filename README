@@ -1,9 +1,14 @@
-This is a document measurment thingy.
+This is a document measurement thingy.
 
 HOWTO:
 
-make
+# pull in the submodule of mochiweb, only needed once
+git submodule init
+git submodule update
 cd deps/mochiweb-src; make; cd -
+
+# this will be your normal compile/run/test loop
+make
 ./start-dev.sh
 . resty
 resty resty http://127.0.0.1:8000/
