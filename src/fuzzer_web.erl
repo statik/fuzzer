@@ -30,6 +30,8 @@ loop(Req, DocRoot) ->
             end;
         'POST' ->
             case Path of
+                "foo" ->
+                    Req:ok({"application/text", [], 'hello'});
                 _ ->
                     Req:not_found()
             end;
