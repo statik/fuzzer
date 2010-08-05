@@ -1,1 +1,13 @@
 This is a document measurment thingy.
+
+HOWTO:
+
+make
+cd deps/mochiweb-src; make; cd -
+./start-dev.sh
+. resty
+resty resty http://127.0.0.1:8000/
+
+GET
+
+BLAMMO!
