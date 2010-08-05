@@ -11,7 +11,7 @@ cd deps/mochiweb-src; make; cd -
 make
 ./start-dev.sh
 . resty
-resty resty http://127.0.0.1:8000/
+resty http://127.0.0.1:8000/
 
 GET
 

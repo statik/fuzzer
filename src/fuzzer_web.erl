@@ -29,9 +29,11 @@ loop(Req, DocRoot) ->
                     Req:serve_file(Path, DocRoot)
             end;
         'POST' ->
+            io:format("~nPath: ~p~n:", [Path]),
             case Path of
-                "foo" ->
-                    Req:ok({"application/text", [], 'hello'});
+                "/foo" ->
+                    Data = mochijson2:encode(['hello']),
+                    Req:ok({"application/json", [], [Data]});
                 _ ->
                     Req:not_found()
             end;
