@@ -1,3 +1,6 @@
 *.beam
-*.app
+*.swp
 doc/
+deps/
+.eunit/
+priv/log/

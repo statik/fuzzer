@@ -2,17 +2,12 @@ This is a document measurement thingy.
 
 HOWTO:
 
-# pull in the submodule of mochiweb, only needed once
-git submodule init
-git submodule update
-cd deps/mochiweb-src; make; cd -
-
+./rebar check-deps
+./rebar get-deps
 # this will be your normal compile/run/test loop
-make
-./start-dev.sh
+./rebar compile
+./start.sh
 . resty
 resty http://127.0.0.1:8000/
 
-GET
-
-POST /foo data
+POST /foo '{"snippet" : "BAM!", "body" : "in the depth of winter i finally learned that there was in me an invincible summer."}'
